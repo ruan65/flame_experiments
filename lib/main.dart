@@ -1,10 +1,9 @@
-import 'package:flame/components/component.dart';
 import 'package:flame/flame.dart';
-import 'package:flame/game/game.dart';
-import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'games/WidgetOverlayExample.dart';
+import 'games/flare_anim_component.dart';
 import 'games/game1.dart';
 
 void main() async {
@@ -51,22 +50,18 @@ class StartScreen extends StatelessWidget {
         children: [
           FlatButton(
             child: Text('Start game 1'),
-            onPressed: () => navigateTo(context, Game1Pad()),
+            onPressed: () => navigateTo(context, Game1().widget),
           ),
           FlatButton(
-            child: Text('Start game 2'),
-            onPressed: () {},
+            child: Text('Widget Overlay Example'),
+            onPressed: () => navigateTo(context, OverlayGame().widget),
           ),
           FlatButton(
             child: Text('Start game 3'),
-            onPressed: () {},
+            onPressed: () => navigateTo(context, FlareBobGame().widget),
           ),
-
         ],
       ),
     );
   }
 }
-
-
-

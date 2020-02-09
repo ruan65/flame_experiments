@@ -3,29 +3,6 @@ import 'package:flame/game/game.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart';
 
-class Game1Pad extends StatefulWidget {
-  @override
-  _Game1PadState createState() => _Game1PadState();
-}
-
-class _Game1PadState extends State<Game1Pad> {
-
-  Game1 game1;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    game1 = Game1();
-  }
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: game1.widget,
-    );
-  }
-}
-
 class Fly extends SpriteComponent {
 
   // creates a component that renders the crate.png sprite, with size 16 x 16
